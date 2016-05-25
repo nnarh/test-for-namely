@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  get '/auth/:provider/callback' => 'sessions#create'
+  root 'pages#index'
+
+  get '/employees' => 'employee_profiles#index', :as => :employees
+  get '/auth/namely/callback', to: 'sessions#create'
   get '/signin' => 'sessions#new', :as => :signin
-  get '/signout' => 'sessions#destroy', :as => :signout
+  delete '/logout', to: 'sessions#destroy'
   get '/auth/failure' => 'sessions#failure'
 end

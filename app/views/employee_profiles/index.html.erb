@@ -1,0 +1,43 @@
+<h1>Employee Profiles</h1>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Employees</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <% @sorted_employees["profiles"].each do |emp| %>
+          <ul class="list-group">
+            <li class="list-group-item"><%= emp["first_name"] + " " + emp["last_name"] %></li>
+          </ul>
+
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 text-center">
+    <button class="btn btn-primary center-block emp-btn" onclick="$('#target').toggle();">
+      <p>Sort Employees</p>
+    </button>
+  </div>
+</div>
+
+
+
+<div id="target" class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Employees Sorted</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <% @sorted_employees["profiles"].each do |emp| %>
+          <ul class="list-group">
+            <li class="list-group-item"><%= emp["first_name"] + " " + emp["last_name"] %></li>
+          </ul>
+
+      <% end %>
+    </div>
+  </div>
+</div>
