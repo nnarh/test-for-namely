@@ -1,6 +1,6 @@
 require 'omniauth'
 require 'omniauth-oauth2'
-
+require 'capybara/rspec'
 
 RSpec.configure do |config|
 
