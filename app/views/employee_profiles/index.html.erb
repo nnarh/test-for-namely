@@ -6,7 +6,7 @@
   </div>
   <div class="panel-body">
     <div>
-      <% @sorted_employees["profiles"].each do |emp| %>
+      <% @employees["profiles"].each do |emp| %>
           <ul class="list-group">
             <li class="list-group-item"><%= emp["first_name"] + " " + emp["last_name"] %></li>
           </ul>
