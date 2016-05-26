@@ -1,6 +1,3 @@
-require 'omniauth'
-require 'omniauth-oauth2'
-require 'capybara/rspec'
 
 RSpec.configure do |config|
 
@@ -29,21 +26,7 @@ RSpec.configure do |config|
   end
 
 
-  OmniAuth.config.test_mode = true
 
-  omniauth_hash = {
-      'provider' => 'namely_test',
-      'uid' => '982939011',
-      'info' => {
-          'name' => 'test'
-      },
-      'credentials' => {
-          'token' => 'mock_token',
-          'secret' => 'mock_secret'
-      }
-  }
-
-  OmniAuth.config.add_mock(:namely_test, omniauth_hash)
 
 
 end
